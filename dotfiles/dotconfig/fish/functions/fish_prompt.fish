@@ -14,7 +14,7 @@ function fish_prompt --description 'Write out the prompt'
 
 	# Set User
 	if not set -q __fish_prompt_username
-		set -g __fish_prompt_username (whoami)
+		set -g __fish_prompt_username (whoami | sed '1s/^\s*./\U&\E/g')
 	end
 
 	# Set color of username based of last exit status
