@@ -1,12 +1,14 @@
 
 function tn --description 'Daily notepad manager'
-    argparse --name=tn 'h/help' 'q/quiet' 'd#' 'e/edit' -- $argv
+    argparse --name=tn 'h/help' 'q/quiet' 'e/edit' 'd#' -- $argv
     or return
 
     if set -q _flag_help
-        echo "tn [-h|--help] [-q|--quiet] [-<days>]"
+        echo "tn [-h|--help] [-q|--quiet] [-e|--edit] [-<days>]"
         return 0
     end
+
+    td -q
 
     set tn $TN
 
@@ -27,7 +29,7 @@ function tn --description 'Daily notepad manager'
     touch $tn
 
     if set -q _flag_edit
-        command $EDITOR $td
+        command $EDITOR $tn
         return
     end
 

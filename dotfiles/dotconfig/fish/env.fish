@@ -19,3 +19,6 @@ set -x TN $HOME/notes/(command date +'%Y.%m.%d.md')
 
 # Set sentinel
 set -x $__backpack_env "1"
+
+# Scaling for Firefox
+# set -x GDK_DPI_SCALE 2
