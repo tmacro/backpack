@@ -7,13 +7,13 @@
 urxvtd -q -f -o
 
 # Start barrier daemon
-barrier &
+#barrier &
 
 # Start ulauncher
-ulauncher &
+#ulauncher &
 
 #/* start blueman-applet in background */
-blueman-applet &
+#blueman-applet &
 
 #/* start lockscreen */
 #/* ds xautolock -locker slock -nowlocker slock */
@@ -24,3 +24,9 @@ blueman-applet &
 
 # Start remapd
 # /home/$(whoami)/.bin/remapd -d 00:18:00:3D:F3:D5 2>&1>/tmp/remapd &
+
+# Start dunst
+#/usr/bin/dunst &
+
+# Start blueberry
+/usr/bin/blueberry &
