@@ -23,12 +23,12 @@ URxvt.scrollBar: false
 
 !Set cursor
 Xcursor.theme: Numix-HIDPI
-Xcursor.size: 16
+Xcursor.size: 30
 !Set scrollback buffer size
 URxvt.saveLine: 100000
 
 URxvt.font: xft:DejaVu Sans Mono:size=12
-
+Xft.dpi: 192
 ! Colors for srcery vim theme
 ! special
 *.foreground:   #fce8c3
