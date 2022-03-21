@@ -5,6 +5,8 @@ set fish_greeting # Disable shell greeting
 
 set -l config_dir (dirname (status --current-filename))
 
+alias gs "git status"
+
 # Load environment variables
 if test -z "$__backpack_env"
 	source $config_dir/env.fish
@@ -13,4 +15,6 @@ end
 # If this is an interactive shell
 if status --is-interactive
 	# Do some stuff
+	td create
+	tn create
 end
