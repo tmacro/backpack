@@ -39,11 +39,18 @@ client.background       #ffffff
 workspace_auto_back_and_forth yes
 
 for_window [class=".*"] border pixel 0
+<<<<<<< HEAD
 gaps outer 0
 gaps horizontal 0
 gaps vertical 0
 gaps inner 5
 gaps top 35
+=======
+gaps top 65
+gaps bottom 10
+gaps horizontal 10
+gaps inner 10
+>>>>>>> trunk
 exec --no-startup-id feh --bg-scale ~/.backpack/background.png
 
 # Set our modifier keys so they can be easily changed.
