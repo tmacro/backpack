@@ -11,7 +11,7 @@ set -x SHELL /usr/bin/fish
 set -x PATH $PATH $HOME/.toolbelt
 
 # Locally compiled binaries in ~/.local/bin
-set -x PATH $PATH $HOME/.local/bin
+set -x PATH $HOME/.local/bin $PATH
 
 # Todays scratch dir and notes file
 set -x TD $HOME/scratch/(command date +'%Y.%m.%d')
