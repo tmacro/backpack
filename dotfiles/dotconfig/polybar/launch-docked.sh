@@ -6,11 +6,16 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Launch bar1 and bar2
-MONITOR=eDP-1 polybar main-left &
-#MONITOR=HDMI-A-1 polybar secondary-left &
-MONITOR=eDP-1 polybar main-right &
-MONITOR=eDP-1 polybar tray &
-#polybar bar2 &
+MAIN=DP-3
+SECONDARY="eDP-1"
+
+MONITOR=$MAIN polybar main-left &
+MONITOR=$MAIN polybar main-right &
+MONITOR=$MAIN polybar tray &
+
+if [ -n "$SECONDARY" ]; then
+    MONITOR=$SECONDARY polybar secondary-left &
+fi
+
 
 echo "Bars launched..."
