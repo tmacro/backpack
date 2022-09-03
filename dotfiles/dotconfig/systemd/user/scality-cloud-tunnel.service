@@ -6,3 +6,6 @@ Restart=always
 RestartSec=10
 EnvironmentFile=%h/.ssh/environment.env
 ExecStart=/usr/bin/ssh -F %h/.ssh/config -N bastion
+
+[Install]
+WantedBy=default.target

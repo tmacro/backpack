@@ -15,6 +15,6 @@ end
 # If this is an interactive shell
 if status --is-interactive
 	# Do some stuff
-	td create
-	tn create
+	today dir create
+	today note create
 end
