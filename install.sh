@@ -15,7 +15,16 @@ machineconfig() {
     git --git-dir="$HOME/$DOTFILES_INSTALL_PATH/" --work-tree="$HOME" $@
 }
 
-source ./conf.env
+SCRIPT_DIR=$(dirname "${BASH_SOURCE[0]}")
+SCRIPT_DIR=$(cd "$SCRIPT_DIR" && pwd)
+
+# shellcheck source=conf.env
+source "$SCRIPT_DIR/conf.env"
+
+if [ -f "./local.env" ]; then
+    # shellcheck source=/dev/null
+    source "$SCRIPT_DIR/local.env"
+fi
 
 log "Cloning dotfiles repository"
 git clone --bare $DOTFILES_REPO $HOME/$DOTFILES_INSTALL_PATH
