@@ -1,9 +1,9 @@
-= Backpack - Meta library for tmacro/toolbelt and tmacro/dotfiles
+= Backpack
 :source-highlighter: highlightjs
 
-This repo contains
+This repo contain configuration and an installer for `tmacro/toolbelt` and `tmacro/dotfiles`.
 
-== Quickstart
+== Install
 
 [source,shell]
 ----
@@ -11,6 +11,7 @@ git clone https://github.com/tmacro/backpack.git ~/.backpack
 cd ~/.backpack
 bash -x install.sh
 ----
+
 
 == Configuration
 
