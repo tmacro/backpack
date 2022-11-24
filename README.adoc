@@ -1,1 +1,28 @@
 = Backpack - Meta library for tmacro/toolbelt and tmacro/dotfiles
+:source-highlighter: highlightjs
+
+This repo contains
+
+== Quickstart
+
+[source,shell]
+----
+git clone https://github.com/tmacro/backpack.git ~/.backback
+cd ~/.backpack
+bash -x install.sh
+----
+
+== Configuration
+
+Upstream repos for the dotfiles and toolbelt repos are read from `conf.env`
+
+[source, bash]
+----
+DOTFILES_REPO=git@github.com:tmacro/dotfiles.git
+DOTFILES_INSTALL_PATH=.dotfiles
+DOTFILES_BRANCH=trunk
+
+TOOLBELT_REPO=git@github.com:tmacro/toolbelt.git
+TOOLBELT_INSTALL_PATH=.toolbelt
+TOOLBELT_BRANCH=trunk
+----
