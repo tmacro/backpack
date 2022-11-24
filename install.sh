@@ -27,10 +27,10 @@ if [ -f "./local.env" ]; then
 fi
 
 log "Cloning dotfiles repository"
-git clone --bare $DOTFILES_REPO $HOME/$DOTFILES_INSTALL_PATH
+git clone --bare "$DOTFILES_REPO" "$HOME/$DOTFILES_INSTALL_PATH"
 
 log "Checking out files"
-machineconfig checkout $DOTFILES_BRANCH
+machineconfig checkout "$DOTFILES_BRANCH"
 
 log "Hiding untracked files"
 machineconfig config --local status.showUntrackedFiles no
@@ -38,11 +38,11 @@ machineconfig config --local status.showUntrackedFiles no
 log "Finished installing dotfiles"
 
 log "Cloning toolbelt repository"
-git clone $TOOLBELT_REPO $HOME/$TOOLBELT_INSTALL_PATH
+git clone "$TOOLBELT_REPO" "$HOME/$TOOLBELT_INSTALL_PATH"
 
 log "Checking out files"
-pushd $TOOLBELT_INSTALL_PATH > /dev/null
-git checkout $TOOLBELT_BRANCH
+pushd "$TOOLBELT_INSTALL_PATH" > /dev/null
+git checkout "$TOOLBELT_BRANCH"
 popd >/dev/null
 
 log "Finished installing toolbelt"
