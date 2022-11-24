@@ -26,6 +26,9 @@ if [ -f "./local.env" ]; then
     source "$SCRIPT_DIR/local.env"
 fi
 
+log "Creating backpack drop-in directory"
+mkdir -p "$HOME/.config/backpack.d"
+
 log "Cloning dotfiles repository"
 git clone --bare "$DOTFILES_REPO" "$HOME/$DOTFILES_INSTALL_PATH"
 
