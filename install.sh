@@ -44,7 +44,7 @@ log "Cloning toolbelt repository"
 git clone "$TOOLBELT_REPO" "$HOME/$TOOLBELT_INSTALL_PATH"
 
 log "Checking out files"
-pushd "$TOOLBELT_INSTALL_PATH" > /dev/null
+pushd "$HOME/$TOOLBELT_INSTALL_PATH" > /dev/null
 git checkout "$TOOLBELT_BRANCH"
 popd >/dev/null
 
