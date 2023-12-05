@@ -15,7 +15,8 @@ bash -x install.sh
 
 == Configuration
 
-Upstream repos for the dotfiles and toolbelt repos are read from `conf.env`
+Upstream repos for the dotfiles and toolbelt repos are read from `conf.env`.
+Paths are relative to the users home directory.
 
 [source, bash]
 ----
